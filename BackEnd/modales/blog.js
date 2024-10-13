@@ -10,7 +10,13 @@ const blogSchema = new Schema(
     body:String,
     name:String,
     isEmployee:Boolean,
+  author: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'user',
+  required: true
   },
+  },
+  
   {timestamps:true}//when create user i see what time to create !! this object 
 );
 
